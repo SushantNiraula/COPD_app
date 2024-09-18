@@ -2,10 +2,10 @@ import pandas as pd
 import pickle 
 import streamlit as st
 
-with open('E:\COPD_Diagnosis_app\pipe.pkl', 'rb') as f:
+with open('pipe.pkl', 'rb') as f:
     pipe = pickle.load(f)
 
-with open('E:\COPD_Diagnosis_app\Best_Random_Forest_Model.pkl', 'rb') as f:
+with open('Best_Random_Forest_Model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 
