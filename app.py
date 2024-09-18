@@ -53,15 +53,15 @@ def main():
     # now for the fitting in pipe we need to convert the data frame to numpy array.
     num_arr=input_df.to_numpy()
     num_arr=num_arr.reshape(1,10)
-
-
     transformed_ip=pipe.transform(num_arr)
-    prediction = model.predict(transformed_ip)
-    if prediction[0]==1:
-        st.write("You have COPD")
-    else:
-        st.write("You don't have COPD")
-
+    if st.button("Predict"):
+        prediction = model.predict(transformed_ip)
+        if prediction[0]==1:
+            st.write("You have COPD")
+        else:
+            st.write("You don't have COPD")
+    
+    
 
 
 
